@@ -4,17 +4,52 @@
  */
 package java.practice;
 
-/**
- *
- * @author JUAN
- */
+import javax.swing.JOptionPane;
+
 public class JavaPractice {
 
-    /**
-     * @param args the command line arguments
-     */
+   
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        
+        String correo;
+        String nombre="";
+        String entrada="";
+        String lectura="";
+        int edad=15;
+        double altura;
+        char letra;
+        boolean respuesta;
+        
+        nombre=JOptionPane.showInputDialog("Digite su nombre");
+        
+        entrada=JOptionPane.showInputDialog("Digite su edad");
+        edad=Integer.parseInt(entrada);
+        
+        lectura=JOptionPane.showInputDialog("Digite su altura");
+        altura=Double.parseDouble(lectura);
+        
+        lectura=lectura+5;
+        altura=altura+5;
+        
+        entrada=entrada+10;
+        edad=edad+10;
+        
+        
+        JOptionPane.showMessageDialog(null, "Buenas noches "+nombre+"\nEn 10 años usted tendrá= "+entrada+" String"+"\nEn 10 años usted tendrá="+edad+" Entero");
+        JOptionPane.showMessageDialog(null, "Buenas noches "+nombre+"\nSi usted crece 5cm medirá= "+lectura+" String"+"\nSi usted crece 5cm medirá="+altura+" Entero");
+      
+        
+        if(edad>=18)
+        {
+            JOptionPane.showMessageDialog(null, "Felicidades si puede votar");
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null, "No puede votar, debe esperar a cumplir los 18 años");
+        }
+        
+        
     }
     
 }
